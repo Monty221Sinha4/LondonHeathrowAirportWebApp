@@ -1,0 +1,58 @@
+﻿@model IEnumerable<LondonHeathrowAirportWebApp.AirportTimeTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AirlineID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CityID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TermID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AirlineID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CityID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TermID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

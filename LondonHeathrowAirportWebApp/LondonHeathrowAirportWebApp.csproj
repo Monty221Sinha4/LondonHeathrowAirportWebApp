@@ -44,10 +44,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
@@ -180,6 +180,12 @@
     <Compile Include="Cites.cs">
       <DependentUpon>AirportModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AirlinesController.cs" />
+    <Compile Include="Controllers\AirportCodesController.cs" />
+    <Compile Include="Controllers\AirportTimeTablesController.cs" />
+    <Compile Include="Controllers\CitesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TerminalsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,6 +221,32 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Views\AirportCodes\Create.cshtml" />
+    <Content Include="Views\AirportCodes\Delete.cshtml" />
+    <Content Include="Views\AirportCodes\Details.cshtml" />
+    <Content Include="Views\AirportCodes\Edit.cshtml" />
+    <Content Include="Views\AirportCodes\Index.cshtml" />
+    <Content Include="Views\Terminals\Create.cshtml" />
+    <Content Include="Views\Terminals\Delete.cshtml" />
+    <Content Include="Views\Terminals\Details.cshtml" />
+    <Content Include="Views\Terminals\Edit.cshtml" />
+    <Content Include="Views\Terminals\Index.cshtml" />
+    <Content Include="Views\Cites\Create.cshtml" />
+    <Content Include="Views\Cites\Delete.cshtml" />
+    <Content Include="Views\Cites\Details.cshtml" />
+    <Content Include="Views\Cites\Edit.cshtml" />
+    <Content Include="Views\Cites\Index.cshtml" />
+    <Content Include="Views\Airlines\Create.cshtml" />
+    <Content Include="Views\Airlines\Delete.cshtml" />
+    <Content Include="Views\Airlines\Details.cshtml" />
+    <Content Include="Views\Airlines\Edit.cshtml" />
+    <Content Include="Views\Airlines\Index.cshtml" />
+    <Content Include="Views\AirportTimeTables\Create.cshtml" />
+    <Content Include="Views\AirportTimeTables\Delete.cshtml" />
+    <Content Include="Views\AirportTimeTables\Details.cshtml" />
+    <Content Include="Views\AirportTimeTables\Edit.cshtml" />
+    <Content Include="Views\AirportTimeTables\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -224,8 +256,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Airline\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
